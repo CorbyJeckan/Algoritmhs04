@@ -12,7 +12,7 @@ namespace Algorithms
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Title = "Algorithms";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Здравствуйте!\nПожалуйста,введите пункт и подпункт для выбора домашнего задания.\nДоступные для выбора пункты:\n1 - Протестируйте поиск строки в HashSet и в массиве.\n2 - Реализуйте двоичное дерево и метод вывода его в консоль." );
+            Console.WriteLine("Здравствуйте!\nПожалуйста,введите пункт и подпункт для выбора домашнего задания.\nДоступные для выбора пункты:\n1 - Протестируйте поиск строки в HashSet и в массиве.\n2 - Реализуйте DFS и BFS для дерева с выводом каждого шага в консоль.");
             string selectednumber = (Console.ReadLine());
             switch (selectednumber)
             {

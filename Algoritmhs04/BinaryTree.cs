@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algoritmhs04;
+using System;
  
 namespace ConsoleApp1
 {
@@ -165,8 +166,31 @@ namespace ConsoleApp1
                 PrintTree(startNode.RightNode, indent, Side.Right);
             }
         }
-        
+        public Employee Search(Employee root, string nameToSearchFor)
+        {
+            Queue<Employee> Q = new Queue<Employee>();
+            HashSet<Employee> S = new HashSet<Employee>();
+            Q.Enqueue(root);
+            S.Add(root);
+
+            while (Q.Count > 0)
+            {
+                Employee e = Q.Dequeue();
+                if (e.name == nameToSearchFor)
+                    return e;
+                foreach (Employee friend in e.Employees)
+                {
+                    if (!S.Contains(friend))
+                    {
+                        Q.Enqueue(friend);
+                        S.Add(friend);
+                    }
+                }
+            }
+            return null;
+        }
+
     }
-  
- 
+
+
 }
